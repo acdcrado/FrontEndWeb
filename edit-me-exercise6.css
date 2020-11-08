@@ -1,0 +1,31 @@
+#red {
+	margin-top: 300px;
+    margin-left: 400px;
+	position: absolute;
+	z-index:2;
+}
+
+#silver {
+	margin-top: 350px;
+    margin-left: 450px;
+    position: absolute;
+	z-index:1;    
+}
+
+
+#green {
+	top: 100px;
+	right:0px;
+	position:fixed;
+}
+
+#blue {
+	display:flex;
+	justify-content:flex-end;
+	align-items:flex-end;
+}
+
+#yellow {
+	display:flex;
+}
+
