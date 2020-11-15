@@ -1,0 +1,60 @@
+<script>
+    var arrayA = [10, 5, 13, 18, 51];
+    console.log("Problem 1: \n");
+    arrayA.forEach(function (item, index, arrayA) {
+        console.log(item);
+    });
+
+
+
+    console.log("\nProblem 2: \n");
+    var arrayB = Array();
+    arrayA.forEach(function (item, index, arrayA) {
+        arrayB[index] = arrayA[index] * 2;
+        console.log(arrayB[index]);
+    });
+
+    console.log("\nProblem 3: \n");
+    var arrayC = [10, 5, 13, 18, 51, 14, 15, 16, 21, 32, 100, 7];
+
+    arrayC.forEach(function (item, index, arrayC) {
+        if (item % 2 == 0) {
+            console.log(item);
+        }
+    });
+
+    console.log("\nProblem 4: \n");
+    var lessthan10A = false;
+    arrayA.forEach(function (item, index, arrayA) {
+        if (item < 10) {
+            lessthan10A = true;
+        }
+    });
+    console.log(lessthan10A);
+    var lessthan10B = false;
+    arrayB.forEach(function (item, index, arrayB) {
+        if (item < 10) {
+            lessthan10B = true;
+        }
+    });
+    console.log(lessthan10B);
+
+    console.log("\nProblem 5: \n");
+    arrayA.forEach(function (item, index, arrayA) {
+        if (item % 3 == 0) {
+            console.log(item);
+        }
+    });
+
+    console.log("\nProblem 6: \n");
+    const reducer = (accumulator, currentValue) => accumulator + currentValue;
+    console.log(arrayA.reduce(reducer));
+
+    console.log("\nProblem 7: \n");
+    var arrayB1 = arrayA.slice(3);
+    arrayB1.forEach(function (item, index, arrayB1) {
+        console.log(item);
+    });
+
+
+</script>
