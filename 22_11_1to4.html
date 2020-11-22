@@ -1,0 +1,93 @@
+<script>
+
+    var person = {
+        salary: 1000,
+        getSecretSalarayInfo: function () {
+            return this.salary;
+        }
+    };
+
+    var stoleSalaryInfo = person.getSecretSalarayInfo();
+
+    console.log("Zadacha 1:");
+    console.log(person.getSecretSalarayInfo());
+    console.log(stoleSalaryInfo);
+    console.log("\n");
+
+    console.log("Zadacha 2:");
+
+    class person2 {
+
+        name;
+        planet = "zemq";
+
+        constructor(name) {
+            this.name = name;
+        }
+
+        get name() {
+            return this.name();
+        }
+        get planet() {
+            return this.planet();
+        }
+    };
+
+    var pesho = new person2("Pesho");
+    console.log("Zdravei ", pesho.name, "ot planetata ", pesho.planet);
+    var gosho = new person2("Gosho");
+    console.log("Zdravei ", gosho.name, "ot planetata ", gosho.planet);
+    var sasho = new person2("Sasho");
+    console.log("Zdravei ", sasho.name, "ot planetata ", sasho.planet);
+    console.log("\n");
+
+
+    console.log("Zadacha 3:");
+
+    class Item {
+
+        name;
+        price = 1000;
+        discount;
+
+        constructor(discount) {
+            this.discount = discount;
+        }
+
+        get price() {
+            return this.price();
+        }
+        get discount() {
+            return this.discount();
+        }
+
+        changeprice(price, discount) {
+            this.price = price * (100 - discount) / 100;
+        }
+    }
+
+    var kola = new Item(20);
+    kola.changeprice(kola.price, kola.discount);
+    console.log(kola.price);
+
+    console.log("\n");
+
+
+    console.log("Zadacha 4: kato komentar v koda");
+
+    /*
+        var person = (function(){
+            var salary = 1000;
+    
+             return{
+                    getSalary: function(){
+                      return salary
+                    }
+                    }
+    })()
+        */
+
+
+
+
+</script>

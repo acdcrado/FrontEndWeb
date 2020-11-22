@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+table, td {
+  border: 1px solid black;
+}
+</style>
+</head>
+<body>
+   
+<script>
+function myFunction() {
+  var x = document.createElement("TABLE");
+  x.setAttribute("id", "myTable");
+  document.body.appendChild(x);
+  var table= document.getElementById("myTable").createCaption();
+  table.innerHTML = "<b>My table caption</b>";
+
+  var y0 = document.createElement("TR");
+  y0.setAttribute("id", "myTr0");
+  document.getElementById("myTable").appendChild(y0);
+  var y1 = document.createElement("TR");
+  y1.setAttribute("id", "myTr1");
+  document.getElementById("myTable").appendChild(y1);
+  var y2 = document.createElement("TR");
+  y2.setAttribute("id", "myTr2");
+  document.getElementById("myTable").appendChild(y2);
+
+  var z0 = document.createElement("TD");
+  var t0 = document.createTextNode("Evidence Rating");
+  z0.appendChild(t0);
+  document.getElementById("myTr0").appendChild(z0);
+
+  var z01 = document.createElement("TD");
+  var t01 = document.createTextNode("Effect");
+  z01.appendChild(t01);
+  document.getElementById("myTr0").appendChild(z01);
+
+  var z02 = document.createElement("TD");
+  var t02 = document.createTextNode("Efficacy");
+  z02.appendChild(t02);
+  document.getElementById("myTr0").appendChild(z02);
+
+  var z03 = document.createElement("TD");
+  var t03 = document.createTextNode("Consensus");
+  z03.appendChild(t03);
+  document.getElementById("myTr0").appendChild(z03);
+
+  var z04 = document.createElement("TD");
+  var t04 = document.createTextNode("Comments");
+  z04.appendChild(t04);
+  document.getElementById("myTr0").appendChild(z04);
+
+
+
+  var z = document.createElement("TD");
+  var t = document.createTextNode("A");
+  z.appendChild(t);
+  document.getElementById("myTr1").appendChild(z);
+
+  var z10 = document.createElement("TD");
+  var t10 = document.createTextNode("Power output");
+  z10.appendChild(t10);
+  document.getElementById("myTr1").appendChild(z10);
+
+  var z11 = document.createElement("TD");
+  var t11 = document.createTextNode("3 stars");
+  z11.appendChild(t11);
+  document.getElementById("myTr1").appendChild(z11);
+
+  var z12 = document.createElement("TD");
+  var t12 = document.createTextNode("80% 18 studies");
+  z12.appendChild(t12);
+  document.getElementById("myTr1").appendChild(z12);
+
+  var z13 = document.createElement("TD");
+  var t13 = document.createTextNode("Lorem ipsum dolor sit amet..........");
+  z13.appendChild(t13);
+  document.getElementById("myTr1").appendChild(z13);
+
+
+  var z2 = document.createElement("TD");  
+  var t2 = document.createTextNode("B");  
+  z2.appendChild(t2);
+  document.getElementById("myTr2").appendChild(z2);
+
+  var z20 = document.createElement("TD");  
+  var t20 = document.createTextNode("Weight");  
+  z20.appendChild(t20);
+  document.getElementById("myTr2").appendChild(z20);
+
+  var z21 = document.createElement("TD");  
+  var t21 = document.createTextNode("4 stars");  
+  z21.appendChild(t21);
+  document.getElementById("myTr2").appendChild(z21);
+
+  var z22 = document.createElement("TD");  
+  var t22 = document.createTextNode("100% 65 studies");  
+  z22.appendChild(t22);
+  document.getElementById("myTr2").appendChild(z22);
+
+  var z23 = document.createElement("TD");  
+  var t23 = document.createTextNode("Lorem ipsum dolor sit amet!.........");  
+  z23.appendChild(t23);
+  document.getElementById("myTr2").appendChild(z23);
+  
+}
+myFunction();
+
+function SwapRows () {
+            var table = document.getElementById ("myTable");
+            if (table.moveRow) {    
+                table.moveRow (0, 1);
+            } 
+            else {      
+                var Row1 = table.rows[1];
+                var Row2 = table.rows[2];
+                Row1.parentNode.insertBefore (Row2, Row1);
+            }
+         }
+</script>
+<button type="button" onclick="SwapRows()">Swap rows?</button>
+</body>
+</html>
